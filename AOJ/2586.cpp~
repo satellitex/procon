@@ -1,0 +1,13 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+struct P3{
+  double x,y,z;
+};
+
+bool check(P3 a,P3 va,double ra,double vra,P3 b, P3 vb,double rb,double vrb, double t){
+  //  sqrt( a.x + va.x * t 
+}
+
+int main(){
+}

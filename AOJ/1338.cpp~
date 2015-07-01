@@ -1,0 +1,7 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+int T,h0,m0,s0;
+
+int main(){
+}

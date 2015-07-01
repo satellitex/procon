@@ -1,0 +1,9 @@
+#include<bits/stdc++.h>
+using namespace std;
+int M,N;
+
+int dp[(1<<16)][16];
+
+int main(){
+  
+}
