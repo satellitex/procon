@@ -1,0 +1,9 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+
+vector<char> data;
+in L,H;
+int main(){
+  
+}

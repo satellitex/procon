@@ -1,0 +1,9 @@
+#include<bits/stdc++.h>
+using namespace std;
+typedef long long ll;
+ll N;
+
+int main(){
+  cin>> N;
+  ll st=0,ed = 1000000000LL;
+}

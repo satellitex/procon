@@ -1,0 +1,56 @@
+#include<bits/stdc++.h>
+using namespace std;
+ 
+struct state{
+  int l,r,c;
+  state(){}
+  state(int l,int r,int c):l(l),r(r),c(c){}
+  bool operator<(const state& s) const{
+    return c < s.c;
+  }
+};
+int T,N,M,K;
+ 
+ 
+int compress(state *a){
+  vector<int> vs;
+  vs.push_back( 1 );
+  vs.push_back( N );
+  for(int i=0;i<M;i++){
+    for(int j=-1;j<=1;j++){
+      int na = a[i].l+j;
+      if( 0 <= na && na <= N )
+        vs.push_back( na );
+      int nb = a[i].r+j;
+      if( 0 <= nb && nb <= N )
+        vs.push_back( nb );
+    }
+  }
+  sort(vs.begin(),vs.end());
+  vs.erase(unique(vs.begin(),vs.end()),vs.end());
+  for(int i=0;i<(int)vs.size();i++){
+    a[i].l = upper_bound(vs.begin(),vs.end(),a[i].l) - vs.begin();
+    a[i].r = upper_bound(vs.begin(),vs.end(),a[i].r) - vs.begin();
+  }
+  return vs.size();  
+}
+ 
+ 
+bool dp[33][200][3001];
+ 
+int main(){
+  cin >> T;
+  for(int ttt=1;ttt<=T;ttt++){
+    cin >> N >> M >> K;
+    state S[33];
+    for(int i=0;i<M;i++)
+      cin >> S[i].l >> S[i].r >> S[i].c;
+    N = compress(S);
+    for(int i=0;i<=M;i++)
+      for(int j=0;j<=N;j++)
+        for(int k=0;k<=3000;k++)
+          dp[i][j][k] = true;
+ 
+ 
+  }
+}

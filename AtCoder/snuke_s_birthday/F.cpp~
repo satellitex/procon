@@ -1,0 +1,8 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+
+int L,N,K;
+int X[100001];
+int main(){
+}

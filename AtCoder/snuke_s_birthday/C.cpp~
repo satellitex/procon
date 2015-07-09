@@ -1,0 +1,6 @@
+#include<bit/stdc++.h>
+using namespace std;
+int N;
+string S[10001]
+int main(){
+}

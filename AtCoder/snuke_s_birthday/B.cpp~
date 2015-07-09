@@ -1,0 +1,9 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+int K;
+strint T;
+char mem[100002];
+
+int main(){
+}
